@@ -6,8 +6,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class StringTest {
     @Test
-    void replace() {
-        String actual = "abc".replace("b", "d");
-        assertThat(actual).isEqualTo("adc");
+    void splitTwo() {
+        String[] oneTwo = "1,2".split(",");
+        assertThat(oneTwo).contains("1");
+        assertThat(oneTwo).contains("2");
+    }
+    @Test
+    void splitOne() {
+        String[] oneTwo = "1".split(",");
+        assertThat(oneTwo).containsExactly("1");
     }
 }
