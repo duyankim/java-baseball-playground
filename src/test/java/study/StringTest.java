@@ -16,4 +16,10 @@ public class StringTest {
         String[] oneTwo = "1".split(",");
         assertThat(oneTwo).containsExactly("1");
     }
+
+    @Test
+    void removeBrackets() {
+        String noBracketString = "(1,2)".substring(1, 4);
+        assertThat(noBracketString).isEqualTo("1,2");
+    }
 }
